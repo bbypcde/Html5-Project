@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        #link{
+            position: fixed;
+            top:0;
+            left:0;
+        }
+        #div1,#div2,#div3{
+            height: 400px;
+            transition: scolltop 1s ease 1s;
+        }
+        #div1{
+            background: #ff0000;
+        }
+        #div2{
+            background: #0f0;
+        }
+        #div3{
+            background: #00f;
+        }
+    </style>
+</head>
+<body>
+<div id="link">
+    <a href="#div1">#div1</a>
+    <!--href里放的就是锚点，因其为#div,所以其自动匹配id为div1的元素-->
+    <a href="#div2">#div2</a>
+    <a href="#div3">#div3</a>
+</div>
+<div id="div1"></div>
+<div id="div2"></div>
+<div id="div3"></div>
+<script src="jquery-1.12.4.js"></script>
+<script>
+
+    $("a").on("click",function(){
+        return false;
+         var $div=$($(this).attr("href"));//取属性值
+        $("html,body").animate({
+            scrollTop:
+        })
+
+
+    });
+</script>
+</body>
+</html>
